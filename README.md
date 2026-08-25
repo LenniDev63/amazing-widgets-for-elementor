@@ -6,8 +6,8 @@
 
 ## Informações do Autor
 
-- **Desenvolvedor:** Lenni Nune de Oliveira
-- **Website:** [https://lennioliveira.site](https://lennioliveira.site)
+- **Desenvolvedor:** Lenni Nunes de Oliveira
+- **Meu Website:** [https://lennioliveira.site](https://lennioliveira.site)
 
 ---
 
