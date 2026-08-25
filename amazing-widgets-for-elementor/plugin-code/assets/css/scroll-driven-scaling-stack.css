@@ -1,0 +1,77 @@
+.amazing-widget-scroll-driven-scaling-stack .scd-01 {
+  --accent: oklch(0.62 0.17 264);
+  font-family: 'Segoe UI',system-ui,sans-serif;
+  background: #eef0f4;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.amazing-widget-scroll-driven-scaling-stack .scd-01__scene {
+  width: min(520px,100%);
+  margin: 0 auto;
+  padding: 8vh 0 20vh;
+}
+
+.amazing-widget-scroll-driven-scaling-stack .scd-01__hint {
+  position: sticky;
+  top: 16px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #8a90a0;
+  margin-bottom: 6vh;
+}
+
+.amazing-widget-scroll-driven-scaling-stack .scd-01__card {
+  position: sticky;
+  top: calc(90px + var(--i) * 16px);
+  min-height: 240px;
+  margin-bottom: 60px;
+  border-radius: 22px;
+  padding: 34px;
+  color: #fff;
+  background: linear-gradient(135deg,var(--accent),oklch(0.55 0.16 292));
+  box-shadow: 0 30px 60px -34px rgba(20,24,50,.7);
+  animation: scd-01-shrink linear both;
+  animation-timeline: view();
+  animation-range: exit;
+  box-sizing: border-box;
+}
+
+.amazing-widget-scroll-driven-scaling-stack .scd-01__num {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  opacity: .7;
+}
+
+.amazing-widget-scroll-driven-scaling-stack .scd-01__card h3 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 14px 0 10px;
+  letter-spacing: -.02em;
+}
+
+.amazing-widget-scroll-driven-scaling-stack .scd-01__card p {
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 34ch;
+  opacity: .92;
+  margin: 0;
+}
+
+.amazing-widget-scroll-driven-scaling-stack .scd-01__end {
+  text-align: center;
+  font-size: 14px;
+  color: #a0a6b4;
+  padding-top: 6vh;
+}
+
+@keyframes scd-01-shrink {
+  to {
+    transform: scale(.9);
+    filter: brightness(.72);
+  }
+}

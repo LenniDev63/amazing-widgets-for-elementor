@@ -1,0 +1,136 @@
+.amazing-widget-glassmorphism-faq-accordion .cfa-07 {
+  --ink: oklch(0.99 0.003 280);
+  --mut: oklch(0.93 0.015 285);
+  --blur: 18px;
+  width: 100%;
+  font-family: 'Segoe UI',system-ui,sans-serif;
+  color: var(--ink);
+  box-sizing: border-box;
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__scene {
+  width: 100%;
+  padding: clamp(20px,4vw,56px);
+  background-image: linear-gradient(160deg,oklch(0.45 0.2 290/.55),oklch(0.5 0.22 340/.35) 55%,oklch(0.55 0.18 240/.5)),url('https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?q=80&w=1800&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__wrap {
+  width: min(100%,620px);
+  margin: 0 auto;
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__head h2 {
+  font-size: clamp(28px,4.5cqi,40px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  text-shadow: 0 2px 24px oklch(0.2 0.08 290/.6);
+  margin: 0;
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__head p {
+  margin-top: 8px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--mut);
+  text-shadow: 0 1px 12px oklch(0.2 0.08 290/.7);
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__list {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  interpolate-size: allow-keywords;
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__item {
+  background: oklch(1 0 0/.14);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(1.6);
+  backdrop-filter: blur(var(--blur)) saturate(1.6);
+  border: 1px solid oklch(1 0 0/.28);
+  border-radius: 18px;
+  box-shadow: inset 0 1px 0 oklch(1 0 0/.35),0 24px 48px oklch(0.3 0.12 290/.35);
+  transition: background .35s,box-shadow .35s,-webkit-backdrop-filter .35s,backdrop-filter .35s;
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__item[open] {
+  background: oklch(1 0 0/.22);
+  -webkit-backdrop-filter: blur(26px) saturate(1.8);
+  backdrop-filter: blur(26px) saturate(1.8);
+  box-shadow: inset 0 1px 0 oklch(1 0 0/.45),0 30px 60px oklch(0.3 0.12 290/.45);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .amazing-widget-glassmorphism-faq-accordion .cfa-07__item {
+    background: oklch(0.35 0.08 290/.92);
+  }
+
+  .amazing-widget-glassmorphism-faq-accordion .cfa-07__item[open] {
+    background: oklch(0.32 0.08 290/.96);
+  }
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 44px;
+  padding: 17px 20px;
+  cursor: pointer;
+  font-size: 15.5px;
+  font-weight: 650;
+  letter-spacing: -.01em;
+  list-style: none;
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__q::-webkit-details-marker {
+  display: none;
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__q i {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid oklch(1 0 0/.4);
+  position: relative;
+  transition: rotate .4s cubic-bezier(.4,0,.2,1),background .3s;
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__q i::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  rotate: 45deg;
+  translate: 0 -1.5px;
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__item[open] .cfa-07__q i {
+  rotate: 180deg;
+  background: oklch(1 0 0/.18);
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__a p {
+  padding: 0 20px 18px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--mut);
+  max-width: 58ch;
+  margin: 0;
+}
+
+.amazing-widget-glassmorphism-faq-accordion .cfa-07__foot {
+  margin-top: 22px;
+  font-family: ui-monospace,Menlo,monospace;
+  font-size: 11.5px;
+  color: var(--mut);
+  text-shadow: 0 1px 10px oklch(0.2 0.08 290/.7);
+}

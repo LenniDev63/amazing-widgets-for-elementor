@@ -1,0 +1,61 @@
+.amazing-widget-peel-back .scd-34 {
+  width: 100%;
+  padding: 80px 20px;
+  display: grid;
+  place-items: center;
+  background: #ececec;
+  font-family: 'Outfit', sans-serif;
+  box-sizing: border-box;
+}
+
+.amazing-widget-peel-back .scd-34__stage {
+  position: relative;
+  width: 260px;
+  height: 340px;
+}
+
+.amazing-widget-peel-back .scd-34__card {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  box-shadow: 0 12px 26px rgba(0,0,0,.18);
+  transition: transform .7s cubic-bezier(.2,.8,.2,1), border-radius .7s;
+  transform-origin: top right;
+  cursor: pointer;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.amazing-widget-peel-back .scd-34__inner {
+  position: absolute;
+  inset: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.amazing-widget-peel-back .scd-34__card h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.amazing-widget-peel-back .scd-34__card p {
+  opacity: .85;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+.amazing-widget-peel-back .scd-34__stage:hover .scd-34__card--c1 {
+  transform: rotate(-14deg) translate(-30px,-30px) scale(.78);
+  border-radius: 22px 22px 22px 90px;
+  box-shadow: -20px 20px 40px rgba(0,0,0,.3);
+}
+
+.amazing-widget-peel-back .scd-34__stage:hover .scd-34__card--c2 {
+  transform: translateY(-10px);
+}

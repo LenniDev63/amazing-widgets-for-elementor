@@ -1,0 +1,48 @@
+.amazing-widget-exemplo-card .codefronts-card {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.amazing-widget-exemplo-card .codefronts-card:hover {
+  transform: translateY(-5px);
+}
+
+.amazing-widget-exemplo-card .card-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.amazing-widget-exemplo-card .card-icon i,
+.amazing-widget-exemplo-card .card-icon svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.amazing-widget-exemplo-card .card-title {
+  font-size: 22px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.amazing-widget-exemplo-card .card-description {
+  font-size: 15px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.amazing-widget-exemplo-card .card-button {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #0066ff;
+  color: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}

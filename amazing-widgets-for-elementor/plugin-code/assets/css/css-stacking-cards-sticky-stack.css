@@ -1,0 +1,94 @@
+.amazing-widget-css-stacking-cards-sticky-stack .sda-04 {
+  font-family: 'Segoe UI',system-ui,sans-serif;
+  background: oklch(0.18 0.02 270);
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.amazing-widget-css-stacking-cards-sticky-stack .sda-04__flow {
+  width: min(560px,100%);
+  margin: 0 auto;
+  padding: 8vh 0 20vh;
+}
+
+.amazing-widget-css-stacking-cards-sticky-stack .sda-04__hint {
+  position: sticky;
+  top: 26px;
+  text-align: center;
+  font-size: 11.5px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: oklch(0.6 0.03 270);
+  margin-bottom: 6vh;
+}
+
+.amazing-widget-css-stacking-cards-sticky-stack .sda-04__card {
+  position: sticky;
+  top: calc(84px + var(--i)*14px);
+  min-height: 280px;
+  margin-bottom: 9vh;
+  border-radius: 24px;
+  padding: 34px 36px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background: linear-gradient(140deg,var(--tint),oklch(from var(--tint) calc(l - 0.18) c calc(h + 30)));
+  box-shadow: 0 34px 70px -30px rgba(0,0,0,.75);
+  transform-origin: center top;
+  box-sizing: border-box;
+}
+
+.amazing-widget-css-stacking-cards-sticky-stack .sda-04__tag {
+  font: 700 11px ui-monospace,Menlo,monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  opacity: .75;
+}
+
+.amazing-widget-css-stacking-cards-sticky-stack .sda-04__card h3 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  margin: 16px 0 10px;
+}
+
+.amazing-widget-css-stacking-cards-sticky-stack .sda-04__card p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 38ch;
+  opacity: .94;
+  margin: 0;
+}
+
+.amazing-widget-css-stacking-cards-sticky-stack .sda-04__foot {
+  margin-top: auto;
+  padding-top: 15px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+.amazing-widget-css-stacking-cards-sticky-stack .sda-04__end {
+  text-align: center;
+  font-size: 13.5px;
+  color: oklch(0.6 0.03 270);
+  padding-top: 6vh;
+}
+
+@supports (animation-timeline: view()) {
+  .amazing-widget-css-stacking-cards-sticky-stack .sda-04__card {
+    animation: sda-04-bury linear both;
+    animation-timeline: view();
+    animation-range: exit-crossing;
+  }
+}
+
+@keyframes sda-04-bury {
+  to {
+    transform: translateY(-10px) scale(.92);
+    filter: brightness(.62);
+  }
+}

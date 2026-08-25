@@ -1,0 +1,124 @@
+.amazing-widget-scroll-activated-stacked-cards .scd-29 {
+  position: relative;
+  width: 100%;
+  background: #05060a;
+  font-family: 'Geist', sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.amazing-widget-scroll-activated-stacked-cards .scd-29__scroll-wrap {
+  position: relative;
+  z-index: 1;
+  width: min(460px, 92vw);
+  margin: 0 auto;
+  padding: 20vh 0 30vh;
+}
+
+.amazing-widget-scroll-activated-stacked-cards .scd-29__step {
+  position: sticky;
+  top: 20vh;
+  height: 320px;
+  border-radius: 28px;
+  padding: 38px;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transform-origin: 50% 0;
+  box-shadow: 0 40px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08) inset;
+  backdrop-filter: blur(6px);
+  box-sizing: border-box;
+  transition: transform 0.1s linear, filter 0.1s linear;
+}
+
+.amazing-widget-scroll-activated-stacked-cards .scd-29__grad {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .95;
+  background-size: 200% 200%;
+  animation: scd-29-flow 9s ease infinite;
+}
+
+@keyframes scd-29-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.amazing-widget-scroll-activated-stacked-cards .scd-29__sheen {
+  position: absolute;
+  top: -50%;
+  left: -30%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: rotate(18deg);
+  animation: scd-29-sweep 6s ease-in-out infinite;
+}
+
+@keyframes scd-29-sweep {
+  0%, 100% { transform: rotate(18deg) translateX(-300px); }
+  50% { transform: rotate(18deg) translateX(700px); }
+}
+
+.amazing-widget-scroll-activated-stacked-cards .scd-29__top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.amazing-widget-scroll-activated-stacked-cards .scd-29__idx {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 4rem;
+  line-height: .8;
+  opacity: .9;
+  text-shadow: 0 4px 20px rgba(0,0,0,.3);
+}
+
+.amazing-widget-scroll-activated-stacked-cards .scd-29__chip {
+  margin-left: auto;
+  font-size: .62rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(6px);
+}
+
+.amazing-widget-scroll-activated-stacked-cards .scd-29__h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2.4rem;
+  letter-spacing: -.01em;
+  margin: 0;
+}
+
+.amazing-widget-scroll-activated-stacked-cards .scd-29__p {
+  opacity: .88;
+  max-width: 32ch;
+  line-height: 1.55;
+  font-weight: 300;
+  margin: 6px 0 0 0;
+}
+
+.amazing-widget-scroll-activated-stacked-cards .scd-29__bar {
+  height: 4px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.25);
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.amazing-widget-scroll-activated-stacked-cards .scd-29__bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #fff;
+  border-radius: 4px;
+  transition: width .2s;
+}

@@ -1,0 +1,169 @@
+.amazing-widget-horizontal-faq-accordion .cfa-15 {
+  --ink: oklch(0.98 0.004 250);
+  --mut: oklch(0.88 0.01 250);
+  --acc: oklch(0.8 0.15 80);
+  width: 100%;
+  font-family: 'Segoe UI',system-ui,sans-serif;
+  color: var(--ink);
+  box-sizing: border-box;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__stage {
+  width: 100%;
+  padding: clamp(20px,4vw,56px);
+  background: oklch(0.17 0.02 260);
+  container: cfa15/inline-size;
+  box-sizing: border-box;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__wrap {
+  width: min(100%,1020px);
+  margin: 0 auto;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__head h2 {
+  font-size: clamp(26px,4cqi,40px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  margin: 0;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__head p {
+  margin-top: 8px;
+  font-size: 14.5px;
+  color: var(--mut);
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__strip {
+  margin-top: 26px;
+  display: flex;
+  gap: 10px;
+  min-height: 420px;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__panel {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 64px 0fr;
+  border-radius: 18px;
+  overflow: hidden;
+  background-image: linear-gradient(oklch(0.2 0.03 260/.25),oklch(0.15 0.03 260/.7)),var(--img);
+  background-size: cover;
+  background-position: center;
+  transition: grid-template-columns .6s cubic-bezier(.3,.8,.25,1),flex-grow .6s cubic-bezier(.3,.8,.25,1),outline-color .2s;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__panel:has(.cfa-15__rb:checked) {
+  grid-template-columns: 64px 1fr;
+  flex-grow: 3.2;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__rb {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__spine {
+  display: grid;
+  place-items: end center;
+  padding: 18px 0;
+  cursor: pointer;
+  min-width: 44px;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__spine h3 {
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 12px oklch(0.15 0.03 260/.8);
+  transition: color .3s;
+  margin: 0;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__panel:has(:checked) .cfa-15__spine h3,
+.amazing-widget-horizontal-faq-accordion .cfa-15__spine:hover h3 {
+  color: var(--acc);
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__body {
+  overflow: hidden;
+  min-width: 0;
+  display: grid;
+  align-items: end;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__body>div {
+  width: max(260px,26cqi);
+  padding: 22px 24px 22px 8px;
+  opacity: 0;
+  translate: 14px 0;
+  transition: opacity .4s .15s,translate .5s .15s cubic-bezier(.3,.8,.25,1);
+  box-sizing: border-box;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__panel:has(:checked) .cfa-15__body>div {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__body h4 {
+  font-size: clamp(17px,2cqi,22px);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  margin: 0;
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__body p {
+  margin-top: 9px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--mut);
+}
+
+.amazing-widget-horizontal-faq-accordion .cfa-15__foot {
+  margin-top: 20px;
+  font-size: 12.5px;
+  color: var(--mut);
+}
+
+@container cfa15 (width < 720px) {
+  .amazing-widget-horizontal-faq-accordion .cfa-15__strip {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .amazing-widget-horizontal-faq-accordion .cfa-15__panel {
+    grid-template-columns: 1fr;
+    grid-template-rows: 56px 0fr;
+    transition: grid-template-rows .5s cubic-bezier(.3,.8,.25,1);
+  }
+
+  .amazing-widget-horizontal-faq-accordion .cfa-15__panel:has(.cfa-15__rb:checked) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 56px 1fr;
+    flex-grow: 1;
+  }
+
+  .amazing-widget-horizontal-faq-accordion .cfa-15__spine {
+    place-items: center start;
+    padding: 0 18px;
+    min-height: 44px;
+  }
+
+  .amazing-widget-horizontal-faq-accordion .cfa-15__spine h3 {
+    writing-mode: horizontal-tb;
+    rotate: none;
+  }
+
+  .amazing-widget-horizontal-faq-accordion .cfa-15__body>div {
+    width: 100%;
+    padding: 0 18px 20px;
+  }
+}

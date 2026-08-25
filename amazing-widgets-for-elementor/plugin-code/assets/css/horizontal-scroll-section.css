@@ -1,0 +1,145 @@
+.amazing-widget-horizontal-scroll-section .sda-05 {
+  font-family: 'Segoe UI',system-ui,sans-serif;
+  background: oklch(0.16 0.015 270);
+  color: #eef0f8;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__intro,
+.amazing-widget-horizontal-scroll-section .sda-05__outro {
+  padding: 60px 24px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__intro h2 {
+  font-size: clamp(30px,5vw,52px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+  margin: 0;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__intro p,
+.amazing-widget-horizontal-scroll-section .sda-05__outro p {
+  font-size: 16px;
+  color: #9ca1bd;
+  margin: 0;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__wrap {
+  height: 380vh;
+  view-timeline: --sda-05-h block;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__pin {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__track {
+  display: flex;
+  gap: 4vw;
+  padding: 0 6vw;
+  width: max-content;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__panel {
+  flex: none;
+  width: min(560px,76vw);
+  height: min(400px,62vh);
+  border-radius: 26px;
+  padding: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  background: linear-gradient(150deg,var(--c),oklch(from var(--c) calc(l - 0.2) c calc(h + 25)));
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,.7);
+  box-sizing: border-box;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__panel span {
+  font: 800 15px ui-monospace,Menlo,monospace;
+  letter-spacing: .2em;
+  opacity: .65;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__panel h3 {
+  font-size: clamp(24px,3vw,34px);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  margin: 0;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__panel p {
+  font-size: 15.5px;
+  line-height: 1.55;
+  max-width: 44ch;
+  opacity: .92;
+  margin: 0;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__dots {
+  width: min(320px,60%);
+  height: 4px;
+  border-radius: 99px;
+  background: rgba(255,255,255,.14);
+  margin: 34px auto 0;
+  display: none;
+}
+
+.amazing-widget-horizontal-scroll-section .sda-05__thumb {
+  width: 25%;
+  height: 100%;
+  border-radius: 99px;
+  background: #fff;
+}
+
+@supports (animation-timeline: view()) {
+  .amazing-widget-horizontal-scroll-section .sda-05__dots {
+    display: block;
+  }
+
+  .amazing-widget-horizontal-scroll-section .sda-05__track {
+    animation: sda-05-slide linear both;
+    animation-timeline: --sda-05-h;
+    animation-range: contain 0% contain 100%;
+  }
+
+  .amazing-widget-horizontal-scroll-section .sda-05__thumb {
+    animation: sda-05-thumb linear both;
+    animation-timeline: --sda-05-h;
+    animation-range: contain 0% contain 100%;
+  }
+}
+
+@supports not (animation-timeline: view()) {
+  .amazing-widget-horizontal-scroll-section .sda-05__wrap {
+    height: auto;
+  }
+
+  .amazing-widget-horizontal-scroll-section .sda-05__pin {
+    position: static;
+    height: auto;
+    overflow-x: auto;
+    padding: 40px 0;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@keyframes sda-05-slide {
+  to { transform: translateX(calc(-100% + 100vw)); }
+}
+
+@keyframes sda-05-thumb {
+  to { transform: translateX(300%); }
+}

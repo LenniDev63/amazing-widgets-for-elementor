@@ -1,0 +1,88 @@
+.amazing-widget-3d-overlapping-stacked-cards .scd-31 {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 60px 20px;
+  background: radial-gradient(circle at 50% 30%,#191d2e,#0a0c14);
+  font-family: 'DM Mono', monospace;
+  box-sizing: border-box;
+}
+
+.amazing-widget-3d-overlapping-stacked-cards .scd-31__stage {
+  perspective: 1400px;
+  width: 340px;
+  height: 420px;
+  position: relative;
+}
+
+.amazing-widget-3d-overlapping-stacked-cards .scd-31__stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotateX(52deg) rotateZ(-34deg);
+  transform-style: preserve-3d;
+  transition: transform .7s cubic-bezier(.3,.9,.3,1);
+}
+
+.amazing-widget-3d-overlapping-stacked-cards .scd-31__stage:hover .scd-31__stack {
+  transform: rotateX(46deg) rotateZ(-28deg);
+}
+
+.amazing-widget-3d-overlapping-stacked-cards .scd-31__plane {
+  position: absolute;
+  left: 50px;
+  top: 120px;
+  width: 240px;
+  height: 150px;
+  border-radius: 18px;
+  padding: 22px;
+  transform-style: preserve-3d;
+  box-shadow: 0 36px 60px rgba(0,0,0,.55);
+  transition: transform .65s cubic-bezier(.3,.9,.3,1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.amazing-widget-3d-overlapping-stacked-cards .scd-31__tier {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: .04em;
+}
+
+.amazing-widget-3d-overlapping-stacked-cards .scd-31__feat {
+  font-size: .72rem;
+  opacity: .85;
+  line-height: 1.6;
+}
+
+.amazing-widget-3d-overlapping-stacked-cards .scd-31__price {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.amazing-widget-3d-overlapping-stacked-cards .scd-31__price small {
+  font-size: .85rem;
+  opacity: .7;
+}
+
+.amazing-widget-3d-overlapping-stacked-cards .scd-31__hint {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #5b6480;
+  font-size: .72rem;
+  letter-spacing: .18em;
+  transition: opacity .4s;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.amazing-widget-3d-overlapping-stacked-cards .scd-31__stage:hover .scd-31__hint {
+  opacity: 0;
+}

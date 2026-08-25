@@ -1,0 +1,62 @@
+.amazing-widget-perspective-deck .scd-33 {
+  width: 100%;
+  padding: 80px 20px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 50%,#10131f,#05060a);
+  font-family: 'Rajdhani', sans-serif;
+  box-sizing: border-box;
+}
+
+.amazing-widget-perspective-deck .scd-33__stage {
+  perspective: 900px;
+  width: 300px;
+  height: 380px;
+}
+
+.amazing-widget-perspective-deck .scd-33__deck {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .8s ease;
+}
+
+.amazing-widget-perspective-deck .scd-33__card {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(155deg,rgba(40,52,90,.9),rgba(18,22,40,.95));
+  border: 1px solid rgba(120,170,255,.35);
+  box-shadow: 0 0 40px rgba(70,120,255,.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 26px;
+  color: #cfe0ff;
+  backdrop-filter: blur(2px);
+  transition: transform .8s cubic-bezier(.2,.8,.2,1), opacity .8s;
+  box-sizing: border-box;
+}
+
+.amazing-widget-perspective-deck .scd-33__card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: .08em;
+  margin: 0;
+}
+
+.amazing-widget-perspective-deck .scd-33__card p {
+  opacity: .6;
+  font-size: .95rem;
+  letter-spacing: .05em;
+  margin: 4px 0 0 0;
+}
+
+.amazing-widget-perspective-deck .scd-33__stage:hover .scd-33__deck {
+  transform: rotateX(18deg) rotateY(-12deg);
+}
+
+.amazing-widget-perspective-deck .scd-33__stage:hover .scd-33__card:nth-child(1) {
+  transform: translateZ(60px);
+}
